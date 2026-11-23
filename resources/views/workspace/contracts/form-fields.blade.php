@@ -1,0 +1,15 @@
+@if ($errors->any())<div class="form-alert" role="alert">{{ $errors->first() }}</div>@endif
+<div class="form-section-title"><span class="form-section-number">01</span><div><h2>Agreement details</h2><p>Record the identifying details shown in the agreement.</p></div></div>
+<div class="form-grid">
+    <label class="field-span-2">Agreement title <span class="required-mark">*</span><input name="title" required maxlength="180" value="{{ old('title', $contract?->title) }}" placeholder="e.g. Cloud services agreement"></label>
+    <label>Document type <span class="required-mark">*</span><select name="document_type" required>@foreach (['Service agreement', 'Supplier agreement', 'Employment agreement', 'Non-disclosure agreement', 'Commercial agreement', 'Lease agreement', 'Amendment', 'Other'] as $type)<option value="{{ $type }}" @selected(old('document_type', $contract?->document_type ?? 'Service agreement') === $type)>{{ $type }}</option>@endforeach</select></label>
+    <label>Counterparty<input name="counterparty" maxlength="180" value="{{ old('counterparty', $contract?->counterparty) }}" placeholder="Organization or person"></label>
+    <label>Contract reference<input name="contract_number" maxlength="120" value="{{ old('contract_number', $contract?->contract_number) }}" placeholder="Optional reference"></label>
+    <label>Effective date<input type="date" name="effective_date" value="{{ old('effective_date', $contract?->effective_date?->format('Y-m-d')) }}"></label>
+    <label>Expiry or renewal date<input type="date" name="expiry_date" value="{{ old('expiry_date', $contract?->expiry_date?->format('Y-m-d')) }}"></label>
+    <label>Notice period <span class="field-hint">days</span><input type="number" min="0" max="3650" name="notice_days" value="{{ old('notice_days', $contract?->notice_days) }}" placeholder="e.g. 30"></label>
+    @if ($contract)<label>Record status<select name="status"><option value="active" @selected(old('status', $contract->status) === 'active')>Active</option><option value="under_review" @selected(old('status', $contract->status) === 'under_review')>Under review</option><option value="archived" @selected(old('status', $contract->status) === 'archived')>Archived</option></select></label>@endif
+    <label class="field-span-2">Team summary <span class="field-hint">Optional · confirm against the document</span><textarea name="summary" rows="4" maxlength="10000" placeholder="Add a short working summary for your team">{{ old('summary', $contract?->summary) }}</textarea></label>
+    <label class="field-span-2 upload-field">Source document <span class="field-hint">PDF, DOC, DOCX, TXT, ODT · up to 20 MB · stored privately</span><input type="file" name="document" accept=".pdf,.doc,.docx,.txt,.odt">@if ($contract?->document_name)<small>Current file: {{ $contract->document_name }}. Upload a new file to replace it.</small>@endif</label>
+</div>
+<div class="form-actions"><a class="button button-ghost" href="{{ $contract ? route('contracts.show', $contract) : route('contracts.index') }}">Cancel</a><button class="button" type="submit">{{ $submitLabel }} <span aria-hidden="true">→</span></button></div>
