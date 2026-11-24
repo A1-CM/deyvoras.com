@@ -25,6 +25,10 @@ The first release stores user-reviewed contract information. It does not extract
 
 The landing page introduces Deyvoras, its agreement workflow, product features, illustrative team perspectives, current and planned pricing, and frequently asked questions. Testimonials are clearly identified as illustrative until verified customer quotes are available. The current workspace is free; no paid subscription is sold through the site.
 
+The `/product` page separates features available in the current release from undated product direction and possible future NVIDIA SDK exploration. No NVIDIA SDK or model is integrated into the current application.
+
+The `/contact` form sends enquiries to `support@deyvoras.com` from `no-reply@deyvoras.com`, with the visitor’s address set as Reply-To. The endpoint is throttled and includes a honeypot field. For production delivery, configure an SMTP mailer (`MAIL_MAILER=smtp`, `MAIL_HOST`, `MAIL_PORT`, `MAIL_USERNAME`, `MAIL_PASSWORD`, and `MAIL_SCHEME`) through the production environment or `APP_ENV_EXTRA`; the local example uses Laravel’s log mailer.
+
 ## cPanel deployment
 
 Deployment and rollback use the reusable Laravel workflows from [`A1-CM/.github`](https://github.com/A1-CM/.github), pinned to `v1.0.9`. Automatic deployment runs from `main` when Laravel application files change. The manual **Deploy Deyvoras to cPanel** action is also available.

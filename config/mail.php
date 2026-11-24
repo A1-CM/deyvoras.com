@@ -2,6 +2,9 @@
 
 return [
 
+    'contact_to' => env('CONTACT_TO_ADDRESS', 'support@deyvoras.com'),
+    'contact_from_address' => env('CONTACT_FROM_ADDRESS', 'no-reply@deyvoras.com'),
+
     /*
     |--------------------------------------------------------------------------
     | Default Mailer

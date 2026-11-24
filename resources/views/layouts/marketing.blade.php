@@ -19,14 +19,15 @@
             <nav class="site-nav" id="site-nav" aria-label="Main navigation">
                 <a href="{{ route('home') }}#about">About</a>
                 <a href="{{ route('home') }}#features">Features</a>
+                <a href="{{ route('contact') }}">Contact</a>
                 <a href="{{ route('home') }}#plans">Plans</a>
                 <a href="{{ route('home') }}#faq">FAQ</a>
                 @auth
                     <a href="{{ route('dashboard') }}">Workspace</a>
                 @else
                     <a href="{{ route('login') }}">Sign in</a>
-                    <a class="button button-small" href="{{ route('register') }}">Create workspace <span aria-hidden="true">→</span></a>
                 @endauth
+                <a class="button button-small" href="{{ route('product') }}">Explore product <span aria-hidden="true">→</span></a>
             </nav>
         </div>
     </header>
@@ -36,8 +37,8 @@
     <footer class="site-footer">
         <div class="container footer-top">
             <div class="footer-brand"><a class="brand" href="{{ route('home') }}"><span class="brand-mark">D</span><span>Deyvoras</span></a><p>Make every agreement easier to find, review, and follow through.</p></div>
-            <div class="footer-column"><span class="eyebrow">Explore</span><a href="{{ route('home') }}#about">About</a><a href="{{ route('home') }}#features">Features</a><a href="{{ route('home') }}#workflow">How it works</a><a href="{{ route('home') }}#plans">Plans</a><a href="{{ route('home') }}#faq">FAQ</a></div>
-            <div class="footer-column"><span class="eyebrow">Get started</span><a href="{{ route('register') }}">Create a workspace</a><a href="{{ route('login') }}">Sign in</a><a href="tel:+94210170264">Contact us</a></div>
+            <div class="footer-column"><span class="eyebrow">Explore</span><a href="{{ route('product') }}">Product</a><a href="{{ route('home') }}#about">About</a><a href="{{ route('home') }}#features">Features</a><a href="{{ route('home') }}#workflow">How it works</a><a href="{{ route('home') }}#plans">Plans</a><a href="{{ route('home') }}#faq">FAQ</a></div>
+            <div class="footer-column"><span class="eyebrow">Get started</span><a href="{{ route('register') }}">Create a workspace</a><a href="{{ route('login') }}">Sign in</a><a href="{{ route('contact') }}">Contact us</a><a href="mailto:support@deyvoras.com">support@deyvoras.com</a></div>
             <div class="footer-column footer-company"><span class="eyebrow">Deyvoras Digital Labs</span><span>Deyvoras Digital Labs (Pvt) Ltd</span><span>No. 37, Hospital Road<br>Jaffna 40000, Sri Lanka</span><a href="tel:+94210170264">+94 21 017 0264</a><span>Deyvoras Digital Labs Inc.</span><span>350 South Grand Avenue<br>Los Angeles, CA 90071, USA</span><a href="tel:+12130850264">+1 213 085 0264</a><small>Founded 24 July 2024<br>Founder: Dhilakshan Kirubakaran</small></div>
         </div>
         <div class="container footer-bottom"><span>© {{ date('Y') }} Deyvoras Digital Labs</span><span>Built for clarity. Reviewed by people.</span></div>

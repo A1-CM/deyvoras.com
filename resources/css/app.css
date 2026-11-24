@@ -616,7 +616,57 @@ input::placeholder, textarea::placeholder { color: var(--subtle); }
 .closing-inner h2 em { color: color-mix(in srgb, var(--inverse-text) 66%, transparent); font-style: normal; font-weight: 400; }
 .form-stack > label.remember-row input { min-height: 0; }
 
+/* Interactive testimonials and billing */
+.testimonial-carousel { max-width: 930px; }
+.testimonial-viewport { overflow: hidden; border: 1px solid var(--line); }
+.testimonial-track { display: flex; transition: transform .38s cubic-bezier(.2,.75,.25,1); }
+.testimonial-track .testimonial-card { flex: 0 0 100%; min-height: 300px; padding: 38px 48px; border: 0; }
+.testimonial-track .testimonial-card:not(.testimonial-featured) { background: var(--surface); }
+.testimonial-track .testimonial-card blockquote { max-width: 690px; font-size: clamp(21px, 3vw, 32px); letter-spacing: -.055em; line-height: 1.35; }
+.testimonial-track .testimonial-card:not(.testimonial-featured) blockquote { font-size: clamp(19px, 2.5vw, 27px); }
+.testimonial-track .testimonial-featured .quote-attribution small { color: color-mix(in srgb, var(--inverse-text) 62%, transparent); }
+.testimonial-controls { display: flex; min-height: 64px; align-items: center; gap: 14px; padding: 10px 4px; color: var(--muted); font-size: 9px; }
+.testimonial-arrow { display: grid; width: 34px; height: 34px; place-items: center; border: 1px solid var(--line-strong); border-radius: 50%; color: var(--text); font-size: 16px; }
+.testimonial-arrow:hover, .testimonial-arrow:focus-visible { background: var(--inverse); color: var(--inverse-text); }
+.testimonial-dots { display: flex; gap: 7px; margin-left: auto; }
+.testimonial-dots button { width: 8px; height: 8px; padding: 0; border: 1px solid var(--line-strong); border-radius: 50%; }
+.testimonial-dots button[aria-current="true"] { border-color: var(--inverse); background: var(--inverse); }
+.billing-switch-wrap { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 28px; color: var(--muted); font-size: 8px; }
+.billing-switch { display: inline-flex; align-items: center; gap: 3px; margin: 0; padding: 4px; border: 1px solid var(--line-strong); border-radius: 999px; }
+.billing-switch button { min-height: 32px; padding: 0 13px; border-radius: 999px; color: var(--muted); font-size: 9px; }
+.billing-switch button[aria-pressed="true"] { background: var(--inverse); color: var(--inverse-text); }
+.billing-switch button span { margin-left: 4px; font-size: 7px; }
+.price-amount strong, .price-amount span, .price-detail { transition: opacity .15s; }
+
+/* Product showcase */
+.product-hero { overflow: hidden; padding: 90px 0 78px; background: var(--surface); }
+.product-hero-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 8%; }
+.product-status { display: flex; align-items: center; gap: 9px; }.product-status > span { width: 7px; height: 7px; border-radius: 50%; background: var(--text); }
+.product-hero h1 { margin: 22px 0 19px; font-size: clamp(52px, 6.5vw, 82px); font-weight: 550; letter-spacing: -.085em; line-height: .94; }.product-hero h1 em { color: var(--muted); font-style: normal; font-weight: 400; }
+.product-hero-grid > div:first-child > p:not(.eyebrow) { max-width: 510px; color: var(--muted); font-size: 14px; line-height: 1.8; }
+.product-hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; margin-top: 26px; }
+.product-hero-art { position: relative; display: grid; min-height: 395px; place-items: center; overflow: hidden; border: 1px solid var(--line-strong); background: var(--bg); }
+.product-orbit { position: absolute; width: 315px; height: 315px; border: 1px solid var(--line); border-radius: 50%; }.product-orbit-one { transform: translate(-38px, 18px); }.product-orbit-two { width: 220px; height: 220px; border-style: dashed; transform: translate(35px, -28px); }
+.product-status-card { position: relative; z-index: 1; width: 260px; padding: 19px; border: 1px solid var(--line-strong); background: var(--bg); box-shadow: var(--shadow); }.product-status-card > .eyebrow { margin-bottom: 13px; font-size: 7px; }.product-status-card > div { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); }.product-status-card b { font-size: 23px; font-weight: 500; letter-spacing: -.07em; }.product-status-card > div span { color: var(--muted); font-size: 7px; font-weight: 700; letter-spacing: .1em; line-height: 1.4; }
+.product-art-label { position: absolute; right: 15px; bottom: 15px; color: var(--muted); font-size: 7px; font-weight: 700; letter-spacing: .1em; }
+.product-section-heading { display: grid; grid-template-columns: .65fr 1.35fr; gap: 8%; margin-bottom: 37px; }.product-section-heading > .eyebrow { padding-top: 9px; }.product-section-heading h2, .nvidia-heading h2 { max-width: 650px; margin: 0 0 12px; font-size: clamp(36px, 4.5vw, 56px); font-weight: 500; letter-spacing: -.07em; line-height: 1.03; }.product-section-heading h2 em, .nvidia-heading h2 em { color: var(--muted); font-style: normal; font-weight: 400; }.product-section-heading > div > p { max-width: 640px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.product-status-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); }.product-status-grid article { position: relative; min-height: 235px; padding: 21px 18px 20px 0; }.product-status-grid article + article { padding-left: 18px; border-left: 1px solid var(--line); }.product-status-grid article > span { color: var(--muted); font-size: 8px; font-weight: 700; }.product-status-grid h3 { margin: 34px 0 8px; font-size: 17px; font-weight: 550; letter-spacing: -.04em; }.product-status-grid p { min-height: 65px; margin: 0; color: var(--muted); font-size: 9px; line-height: 1.7; }.product-status-grid small { display: block; margin-top: 19px; color: var(--muted); font-size: 7px; font-weight: 700; letter-spacing: .1em; }.product-caveat { margin-top: 15px; color: var(--muted); font-size: 9px; line-height: 1.7; }
+.product-next { background: var(--inverse); color: var(--inverse-text); }.product-next-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 9%; }.product-next .eyebrow { color: color-mix(in srgb, var(--inverse-text) 64%, transparent); }.product-next h2 { margin: 14px 0 17px; color: var(--inverse-text); font-size: clamp(38px, 4.7vw, 60px); font-weight: 500; letter-spacing: -.075em; line-height: 1; }.product-next h2 em { color: color-mix(in srgb, var(--inverse-text) 60%, transparent); font-style: normal; font-weight: 400; }.product-next-grid > div:first-child > p:not(.eyebrow) { color: color-mix(in srgb, var(--inverse-text) 70%, transparent); font-size: 12px; line-height: 1.8; }.product-next .text-link { margin-top: 13px; color: var(--inverse-text); }
+.product-roadmap article { display: grid; grid-template-columns: 33px 1fr auto; gap: 13px; padding: 19px 0; border-bottom: 1px solid color-mix(in srgb, var(--inverse-text) 24%, transparent); }.product-roadmap article:first-child { border-top: 1px solid color-mix(in srgb, var(--inverse-text) 24%, transparent); }.roadmap-mark { color: color-mix(in srgb, var(--inverse-text) 60%, transparent); font-size: 9px; }.product-roadmap article small { color: color-mix(in srgb, var(--inverse-text) 58%, transparent); font-size: 6px; font-weight: 700; letter-spacing: .12em; }.product-roadmap h3 { margin: 5px 0; color: var(--inverse-text); font-size: 15px; font-weight: 500; }.product-roadmap article p { max-width: 455px; margin: 0; color: color-mix(in srgb, var(--inverse-text) 67%, transparent); font-size: 9px; line-height: 1.65; }.roadmap-status { align-self: start; padding: 6px 8px; border: 1px solid color-mix(in srgb, var(--inverse-text) 30%, transparent); color: color-mix(in srgb, var(--inverse-text) 70%, transparent); font-size: 6px; font-weight: 700; letter-spacing: .1em; }.roadmap-note { margin: 12px 0 0 46px; color: color-mix(in srgb, var(--inverse-text) 58%, transparent); font-size: 8px; }
+.product-nvidia { background: var(--surface); }.nvidia-heading { display: flex; align-items: end; justify-content: space-between; gap: 8%; margin-bottom: 39px; }.nvidia-heading > div { max-width: 600px; }.nvidia-heading > p { max-width: 390px; margin: 0 0 4px; color: var(--muted); font-size: 11px; line-height: 1.8; }.nvidia-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }.nvidia-grid article { position: relative; min-height: 245px; padding: 17px; border: 1px solid var(--line); background: var(--bg); }.nvidia-index { color: var(--muted); font-size: 7px; font-weight: 700; }.nvidia-mark { display: grid; width: 38px; height: 38px; margin: 21px 0 14px; place-items: center; border: 1px solid var(--line-strong); border-radius: 50%; font-size: 8px; font-weight: 700; }.nvidia-grid h3 { margin: 0 0 6px; font-size: 14px; font-weight: 550; letter-spacing: -.03em; }.nvidia-grid p { color: var(--muted); font-size: 8px; line-height: 1.65; }.nvidia-grid small { position: absolute; bottom: 15px; color: var(--muted); font-size: 6px; font-weight: 700; letter-spacing: .08em; }.nvidia-note { display: flex; align-items: flex-start; gap: 17px; margin-top: 13px; padding: 15px; border: 1px dashed var(--line-strong); }.nvidia-note span { flex: 0 0 auto; font-size: 7px; font-weight: 700; letter-spacing: .1em; }.nvidia-note p { margin: 0; color: var(--muted); font-size: 9px; line-height: 1.7; }
+.product-contact-link { display: inline-block; margin: 14px 0 0 18px; color: color-mix(in srgb, var(--inverse-text) 80%, transparent); font-size: 10px; text-decoration: underline; text-underline-offset: 3px; }
+
+/* Support contact form */
+.contact-page { padding: 86px 0 110px; background: var(--surface); }.contact-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 9%; align-items: start; }.contact-intro { padding-top: 22px; }.contact-intro h1 { margin: 18px 0; font-size: clamp(50px, 6vw, 75px); font-weight: 500; letter-spacing: -.08em; line-height: .96; }.contact-intro h1 em { color: var(--muted); font-style: normal; font-weight: 400; }.contact-intro > p:not(.eyebrow) { max-width: 400px; color: var(--muted); font-size: 12px; line-height: 1.8; }.contact-address { display: grid; gap: 5px; margin-top: 48px; padding-top: 15px; border-top: 1px solid var(--line-strong); }.contact-address a { font-size: 15px; font-weight: 550; }.contact-address small { max-width: 290px; color: var(--muted); font-size: 8px; line-height: 1.65; }.contact-side-note { display: flex; gap: 12px; margin-top: 47px; color: var(--muted); }.contact-side-note span { color: var(--text); font-size: 8px; font-weight: 700; }.contact-side-note p { max-width: 260px; margin: 0; font-size: 9px; line-height: 1.6; }
+.contact-form-card { padding: 24px 27px; border: 1px solid var(--line-strong); background: var(--bg); }.contact-form-heading { display: flex; justify-content: space-between; margin-bottom: 19px; padding-bottom: 13px; border-bottom: 1px solid var(--line); }.contact-form-heading > span:last-child { color: var(--muted); font-size: 7px; font-weight: 700; letter-spacing: .1em; }.contact-form { display: grid; gap: 15px; }.contact-form > label, .contact-form-row > label { display: flex; flex-direction: column; gap: 6px; font-size: 10px; font-weight: 600; }.contact-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }.contact-form input, .contact-form textarea { width: 100%; min-height: 42px; padding: 10px 11px; border: 1px solid var(--line-strong); border-radius: 2px; outline: none; background: var(--bg); color: var(--text); font-size: 11px; font-weight: 400; }.contact-form textarea { min-height: 130px; resize: vertical; }.contact-form input:focus, .contact-form textarea:focus { border-color: var(--text); box-shadow: 0 0 0 2px color-mix(in srgb, var(--text) 10%, transparent); }.contact-form label > .field-hint, .contact-form label > small { color: var(--muted); font-size: 8px; font-weight: 400; }.contact-form .button { justify-self: start; min-height: 43px; font-size: 11px; }.contact-form-footnote { margin: 14px 0 0; color: var(--muted); font-size: 7px; line-height: 1.7; }.contact-form-footnote strong { color: var(--text); font-weight: 600; }.contact-honeypot { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; }
+.form-success { border-color: var(--line-strong); }
+
 @media (max-width: 1050px) {
+    .product-status-grid { grid-template-columns: repeat(2, 1fr); }
+    .product-status-grid article:nth-child(3) { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+    .product-status-grid article:nth-child(4) { border-top: 1px solid var(--line); }
+    .nvidia-grid { grid-template-columns: repeat(2, 1fr); }
+    .contact-layout { gap: 5%; }
     .home-hero-grid { min-height: 500px; gap: 3%; }
     .home-hero-copy { padding-left: 0; }
     .home-hero-copy h1 { font-size: clamp(58px, 7vw, 76px); }
@@ -679,8 +729,28 @@ input::placeholder, textarea::placeholder { color: var(--subtle); }
     .price-card ul { min-height: auto; }
     .faq-section { padding: 78px 0; }
     .faq-list summary { min-height: 62px; font-size: 11px; }
+    .product-hero { padding: 55px 0 47px; }
+    .product-hero-grid, .product-next-grid { grid-template-columns: 1fr; gap: 30px; }
+    .product-hero-art { min-height: 330px; }
+    .product-section-heading { grid-template-columns: 1fr; gap: 13px; }
+    .product-status-grid { grid-template-columns: 1fr 1fr; }
+    .product-status-grid article { min-height: 225px; padding-right: 12px; }
+    .product-status-grid article + article { padding-left: 12px; }
+    .product-status-grid article:nth-child(odd) { padding-left: 0; border-left: 0; }
+    .product-status-grid article:nth-child(even) { border-left: 1px solid var(--line); }
+    .product-status-grid article:nth-child(3), .product-status-grid article:nth-child(4) { border-top: 1px solid var(--line); }
+    .product-next-grid { gap: 34px; }
+    .nvidia-heading { align-items: flex-start; flex-direction: column; gap: 13px; }
+    .nvidia-grid { grid-template-columns: 1fr 1fr; }
+    .contact-page { padding: 54px 0 75px; }
+    .contact-layout { grid-template-columns: 1fr; gap: 32px; }
+    .contact-intro { padding-top: 0; }
+    .contact-address { margin-top: 24px; }
+    .contact-side-note { margin-top: 21px; }
+    .contact-form-card { padding: 19px; }
+    .testimonial-track .testimonial-card { min-height: 270px; padding: 28px; }
     .header-inner { height: 64px; }
-    .site-nav { position: fixed; z-index: 40; inset: 0; display: none; min-height: 100vh; min-height: 100dvh; align-items: stretch; justify-content: center; flex-direction: column; gap: 0; overflow-y: auto; padding: calc(env(safe-area-inset-top) + 86px) max(28px, calc((100vw - 540px) / 2)) calc(env(safe-area-inset-bottom) + 28px); background: var(--bg); }
+    .site-nav { position: fixed; z-index: 40; inset: 0; display: none; width: 100%; height: 100vh; height: 100dvh; min-height: 100vh; min-height: 100dvh; align-items: stretch; justify-content: center; flex-direction: column; gap: 0; overflow-y: auto; overscroll-behavior: contain; padding: calc(env(safe-area-inset-top) + 86px) max(28px, calc((100vw - 540px) / 2)) calc(env(safe-area-inset-bottom) + 28px); background: var(--bg); }
     .site-nav.is-open { display: flex; }
     .site-header:has(.site-nav.is-open) { backdrop-filter: none; }
     .site-nav > a:not(.button) { padding: 12px 0; border-bottom: 1px solid var(--line); color: var(--text); font-size: clamp(27px, 7vw, 43px); font-weight: 500; letter-spacing: -.065em; line-height: 1.1; }
@@ -785,6 +855,22 @@ input::placeholder, textarea::placeholder { color: var(--subtle); }
     .date-art { right: 18px; transform: rotate(-4deg) scale(.82); transform-origin: top right; }
     .review-art { margin-right: 4px; }
     .approach-orbit { transform: scale(.74); }
+    .product-hero h1, .contact-intro h1 { font-size: 53px; }
+    .product-hero-art { min-height: 295px; }
+    .product-orbit { width: 260px; height: 260px; }
+    .product-orbit-two { width: 185px; height: 185px; }
+    .product-status-grid { grid-template-columns: 1fr; }
+    .product-status-grid article, .product-status-grid article + article { min-height: 0; padding: 15px 0; border-top: 1px solid var(--line); border-left: 0; }
+    .product-status-grid article h3 { margin: 15px 0 6px; }
+    .product-status-grid p { min-height: 0; }
+    .nvidia-grid { grid-template-columns: 1fr; }
+    .nvidia-grid article { min-height: 215px; }
+    .nvidia-note { flex-direction: column; gap: 7px; }
+    .contact-form-row { grid-template-columns: 1fr; }
+    .testimonial-track .testimonial-card { min-height: 300px; padding: 22px; }
+    .testimonial-controls { gap: 8px; }
+    .testimonial-dots { gap: 5px; }
+    .billing-switch-wrap { align-items: center; flex-direction: column; gap: 7px; }
     .testimonial-card { padding: 20px; }
     .price-card-top { align-items: flex-start; flex-direction: column; }
     .hero-copy h1 { font-size: 51px; }
