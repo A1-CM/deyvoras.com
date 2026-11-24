@@ -23,11 +23,15 @@ The first release stores user-reviewed contract information. It does not extract
 
 ## Product landing page
 
-The landing page introduces Deyvoras, its agreement workflow, product features, illustrative team perspectives, current and planned pricing, and frequently asked questions. Testimonials are clearly identified as illustrative until verified customer quotes are available. The current workspace is free; no paid subscription is sold through the site.
+The landing page introduces Deyvoras, its agreement workflow, product features, illustrative team perspectives, current and proposed pricing, and frequently asked questions. Testimonials are clearly identified as illustrative until verified customer quotes are available. The current workspace is free; Team and Business are proposed plans.
+
+The Team and Business links open a demo checkout preview. It accepts a name and email, then shows a confirmation without collecting card details, saving a subscription, or processing a payment. This flow is for UI review only and is not a billing integration.
 
 The `/product` page separates features available in the current release from undated product direction and possible future NVIDIA SDK exploration. No NVIDIA SDK or model is integrated into the current application.
 
 The `/contact` form sends enquiries to `support@deyvoras.com` from `no-reply@deyvoras.com`, with the visitor’s address set as Reply-To. The endpoint is throttled and includes a honeypot field. For production delivery, configure an SMTP mailer (`MAIL_MAILER=smtp`, `MAIL_HOST`, `MAIL_PORT`, `MAIL_USERNAME`, `MAIL_PASSWORD`, and `MAIL_SCHEME`) through the production environment or `APP_ENV_EXTRA`; the local example uses Laravel’s log mailer.
+
+Compiled Blade views under `storage/framework/views` are runtime cache files. They are ignored by Git and can be regenerated with `php artisan view:cache`.
 
 ## cPanel deployment
 

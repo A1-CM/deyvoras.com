@@ -609,7 +609,7 @@ input::placeholder, textarea::placeholder { color: var(--subtle); }
 .orbit-label { position: absolute; z-index: 2; padding: 8px 10px; border: 1px solid var(--line); background: var(--bg); font-size: 7px; font-weight: 700; letter-spacing: .1em; }.orbit-source { top: 32px; left: 63px; }.orbit-team { top: 72px; right: 10px; }.orbit-record { bottom: 42px; left: 102px; }
 .testimonial-section { padding: 105px 0 115px; }.testimonial-heading { align-items: end; }.testimonial-heading .testimonial-disclosure { max-width: 310px; padding-left: 14px; border-left: 1px solid var(--line-strong); font-size: 9px; }
 .testimonial-grid { display: grid; grid-template-columns: 1.15fr .85fr .85fr; gap: 12px; }.testimonial-card { position: relative; display: flex; min-height: 280px; flex-direction: column; padding: 24px; border: 1px solid var(--line); background: var(--surface); }.testimonial-featured { background: var(--inverse); color: var(--inverse-text); }.quote-mark { font-size: 52px; font-weight: 400; line-height: .8; }.testimonial-card blockquote { margin: 16px 0 24px; font-size: 17px; font-weight: 450; letter-spacing: -.035em; line-height: 1.5; }.testimonial-featured blockquote { max-width: 410px; font-size: 22px; letter-spacing: -.055em; }.quote-attribution { display: flex; align-items: center; gap: 10px; margin-top: auto; }.quote-avatar { display: grid; width: 31px; height: 31px; place-items: center; border: 1px solid color-mix(in srgb, var(--inverse-text) 50%, transparent); border-radius: 50%; font-size: 10px; }.quote-avatar-alt { border-color: var(--line-strong); }.quote-attribution b, .quote-attribution small { display: block; }.quote-attribution b { font-size: 9px; }.quote-attribution small { margin-top: 2px; color: var(--muted); font-size: 7px; }.testimonial-featured .quote-attribution small { color: color-mix(in srgb, var(--inverse-text) 60%, transparent); }.testimonial-index { color: var(--muted); font-size: 7px; font-weight: 700; letter-spacing: .12em; }.testimonial-featured .testimonial-index { position: absolute; top: 27px; right: 24px; color: color-mix(in srgb, var(--inverse-text) 62%, transparent); }
-.pricing-section { background: var(--surface); }.pricing-heading { margin-bottom: 43px; }.pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }.price-card { padding: 27px 30px 29px; border: 1px solid var(--line-strong); background: var(--bg); }.price-card-dark { border-color: var(--inverse); background: var(--inverse); color: var(--inverse-text); }.price-card-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }.price-label, .price-stamp { font-size: 7px; font-weight: 700; letter-spacing: .12em; }.price-stamp { padding: 6px 8px; border: 1px solid var(--line); color: var(--muted); }.price-card-dark .price-stamp { border-color: color-mix(in srgb, var(--inverse-text) 30%, transparent); color: color-mix(in srgb, var(--inverse-text) 70%, transparent); }.price-card h3 { margin: 22px 0 5px; font-size: 27px; font-weight: 550; letter-spacing: -.06em; }.price-card-dark h3 { color: var(--inverse-text); }.price-desc { max-width: 375px; min-height: 39px; margin: 0; color: var(--muted); font-size: 10px; line-height: 1.6; }.price-card-dark .price-desc { color: color-mix(in srgb, var(--inverse-text) 68%, transparent); }.price-amount { display: flex; align-items: baseline; gap: 6px; margin: 22px 0 1px; }.price-amount strong { font-size: 40px; font-weight: 500; letter-spacing: -.08em; line-height: 1; }.price-amount span { color: var(--muted); font-size: 9px; }.price-card-dark .price-amount strong { font-size: 29px; letter-spacing: -.06em; }.price-detail { color: var(--muted); font-size: 8px; }.price-card-dark .price-detail { color: color-mix(in srgb, var(--inverse-text) 65%, transparent); }.price-card ul { display: grid; gap: 11px; min-height: 150px; margin: 25px 0; padding: 21px 0 0; border-top: 1px solid var(--line); list-style: none; }.price-card-dark ul { border-color: color-mix(in srgb, var(--inverse-text) 24%, transparent); }.price-card li { position: relative; padding-left: 19px; color: var(--muted); font-size: 10px; }.price-card-dark li { color: color-mix(in srgb, var(--inverse-text) 76%, transparent); }.price-card li::before { position: absolute; left: 0; content: "✓"; color: var(--text); }.price-card-dark li::before { color: var(--inverse-text); }.price-card .button { min-height: 44px; font-size: 10px; }.pricing-footnote { margin-top: 15px; color: var(--muted); font-size: 8px; line-height: 1.6; }
+.pricing-section { background: var(--surface); }.pricing-heading { margin-bottom: 43px; }.pricing-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }.price-card { padding: 27px 25px 29px; border: 1px solid var(--line-strong); background: var(--bg); }.price-card-dark { border-color: var(--inverse); background: var(--inverse); color: var(--inverse-text); }.price-card-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }.price-label, .price-stamp { font-size: 10px; font-weight: 700; letter-spacing: .08em; }.price-stamp { padding: 6px 8px; border: 1px solid var(--line); color: var(--muted); }.price-card-dark .price-stamp { border-color: color-mix(in srgb, var(--inverse-text) 30%, transparent); color: color-mix(in srgb, var(--inverse-text) 70%, transparent); }.price-card h3 { margin: 22px 0 5px; font-size: 27px; font-weight: 550; letter-spacing: -.06em; }.price-card-dark h3 { color: var(--inverse-text); }.price-desc { max-width: 375px; min-height: 50px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.6; }.price-card-dark .price-desc { color: color-mix(in srgb, var(--inverse-text) 68%, transparent); }.price-amount { display: flex; align-items: baseline; gap: 6px; margin: 22px 0 1px; }.price-amount strong { font-size: 40px; font-weight: 500; letter-spacing: -.08em; line-height: 1; }.price-amount span { color: var(--muted); font-size: 12px; }.price-card-dark .price-amount strong { font-size: 40px; letter-spacing: -.06em; }.price-detail { color: var(--muted); font-size: 12px; }.price-card-dark .price-detail { color: color-mix(in srgb, var(--inverse-text) 65%, transparent); }.price-card ul { display: grid; gap: 11px; min-height: 172px; margin: 25px 0; padding: 21px 0 0; border-top: 1px solid var(--line); list-style: none; }.price-card-dark ul { border-color: color-mix(in srgb, var(--inverse-text) 24%, transparent); }.price-card li { position: relative; padding-left: 19px; color: var(--muted); font-size: 13px; line-height: 1.5; }.price-card-dark li { color: color-mix(in srgb, var(--inverse-text) 76%, transparent); }.price-card li::before { position: absolute; left: 0; content: "✓"; color: var(--text); }.price-card-dark li::before { color: var(--inverse-text); }.price-card .button { min-height: 48px; font-size: 12px; }.pricing-footnote { margin-top: 15px; color: var(--muted); font-size: 12px; line-height: 1.6; }
 .faq-section { padding: 112px 0; }.faq-grid { display: grid; grid-template-columns: .78fr 1.22fr; gap: 10%; }.faq-intro h2 { margin-bottom: 17px; }.faq-intro > p:not(.eyebrow) { max-width: 330px; color: var(--muted); font-size: 12px; line-height: 1.8; }.faq-intro .text-link { margin-top: 10px; }.faq-list details { border-bottom: 1px solid var(--line); }.faq-list details:first-child { border-top: 1px solid var(--line); }.faq-list summary { display: flex; min-height: 68px; align-items: center; justify-content: space-between; gap: 20px; cursor: pointer; list-style: none; font-size: 12px; font-weight: 550; }.faq-list summary::-webkit-details-marker { display: none; }.faq-list summary span { color: var(--muted); font-size: 19px; font-weight: 300; transition: transform .2s; }.faq-list details[open] summary span { transform: rotate(45deg); }.faq-list details p { max-width: 600px; margin: -2px 30px 19px 0; color: var(--muted); font-size: 10px; line-height: 1.8; }
 .closing-inner .eyebrow { color: color-mix(in srgb, var(--inverse-text) 65%, transparent); }
 .closing-inner h2 { font-size: clamp(46px, 6vw, 76px); font-weight: 500; letter-spacing: -.08em; }
@@ -656,12 +656,127 @@ input::placeholder, textarea::placeholder { color: var(--subtle); }
 .product-nvidia { background: var(--surface); }.nvidia-heading { display: flex; align-items: end; justify-content: space-between; gap: 8%; margin-bottom: 39px; }.nvidia-heading > div { max-width: 600px; }.nvidia-heading > p { max-width: 390px; margin: 0 0 4px; color: var(--muted); font-size: 11px; line-height: 1.8; }.nvidia-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }.nvidia-grid article { position: relative; min-height: 245px; padding: 17px; border: 1px solid var(--line); background: var(--bg); }.nvidia-index { color: var(--muted); font-size: 7px; font-weight: 700; }.nvidia-mark { display: grid; width: 38px; height: 38px; margin: 21px 0 14px; place-items: center; border: 1px solid var(--line-strong); border-radius: 50%; font-size: 8px; font-weight: 700; }.nvidia-grid h3 { margin: 0 0 6px; font-size: 14px; font-weight: 550; letter-spacing: -.03em; }.nvidia-grid p { color: var(--muted); font-size: 8px; line-height: 1.65; }.nvidia-grid small { position: absolute; bottom: 15px; color: var(--muted); font-size: 6px; font-weight: 700; letter-spacing: .08em; }.nvidia-note { display: flex; align-items: flex-start; gap: 17px; margin-top: 13px; padding: 15px; border: 1px dashed var(--line-strong); }.nvidia-note span { flex: 0 0 auto; font-size: 7px; font-weight: 700; letter-spacing: .1em; }.nvidia-note p { margin: 0; color: var(--muted); font-size: 9px; line-height: 1.7; }
 .product-contact-link { display: inline-block; margin: 14px 0 0 18px; color: color-mix(in srgb, var(--inverse-text) 80%, transparent); font-size: 10px; text-decoration: underline; text-underline-offset: 3px; }
 
+/* Product copy is designed for reading, including the planning details. */
+.product-hero-grid > div:first-child > p:not(.eyebrow) { font-size: 17px; }
+.product-status-card > .eyebrow { font-size: 10px; }
+.product-status-card > div span { font-size: 10px; }
+.product-art-label { font-size: 9px; }
+.product-section-heading > div > p { font-size: 16px; }
+.product-status-grid article { min-height: 285px; }
+.product-status-grid article > span { font-size: 11px; }
+.product-status-grid h3 { font-size: 19px; }
+.product-status-grid p { min-height: 105px; font-size: 14px; line-height: 1.7; }
+.product-status-grid small { font-size: 10px; }
+.product-caveat { font-size: 13px; }
+.product-next-grid > div:first-child > p:not(.eyebrow) { font-size: 16px; }
+.product-roadmap article { grid-template-columns: 38px 1fr auto; gap: 17px; }
+.roadmap-mark { font-size: 13px; }
+.product-roadmap article small { font-size: 10px; }
+.product-roadmap h3 { font-size: 19px; }
+.product-roadmap article p { font-size: 14px; line-height: 1.7; }
+.roadmap-status { font-size: 9px; }
+.roadmap-note { font-size: 12px; }
+.nvidia-heading > p { font-size: 15px; }
+.nvidia-grid article { min-height: 320px; padding: 20px; }
+.nvidia-index { font-size: 10px; }
+.nvidia-mark { font-size: 10px; }
+.nvidia-grid h3 { font-size: 17px; }
+.nvidia-grid p { font-size: 14px; line-height: 1.7; }
+.nvidia-grid small { font-size: 9px; }
+.nvidia-note span { font-size: 10px; }
+.nvidia-note p { font-size: 14px; line-height: 1.7; }
+.product-contact-link { font-size: 13px; }
+
 /* Support contact form */
 .contact-page { padding: 86px 0 110px; background: var(--surface); }.contact-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 9%; align-items: start; }.contact-intro { padding-top: 22px; }.contact-intro h1 { margin: 18px 0; font-size: clamp(50px, 6vw, 75px); font-weight: 500; letter-spacing: -.08em; line-height: .96; }.contact-intro h1 em { color: var(--muted); font-style: normal; font-weight: 400; }.contact-intro > p:not(.eyebrow) { max-width: 400px; color: var(--muted); font-size: 12px; line-height: 1.8; }.contact-address { display: grid; gap: 5px; margin-top: 48px; padding-top: 15px; border-top: 1px solid var(--line-strong); }.contact-address a { font-size: 15px; font-weight: 550; }.contact-address small { max-width: 290px; color: var(--muted); font-size: 8px; line-height: 1.65; }.contact-side-note { display: flex; gap: 12px; margin-top: 47px; color: var(--muted); }.contact-side-note span { color: var(--text); font-size: 8px; font-weight: 700; }.contact-side-note p { max-width: 260px; margin: 0; font-size: 9px; line-height: 1.6; }
 .contact-form-card { padding: 24px 27px; border: 1px solid var(--line-strong); background: var(--bg); }.contact-form-heading { display: flex; justify-content: space-between; margin-bottom: 19px; padding-bottom: 13px; border-bottom: 1px solid var(--line); }.contact-form-heading > span:last-child { color: var(--muted); font-size: 7px; font-weight: 700; letter-spacing: .1em; }.contact-form { display: grid; gap: 15px; }.contact-form > label, .contact-form-row > label { display: flex; flex-direction: column; gap: 6px; font-size: 10px; font-weight: 600; }.contact-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }.contact-form input, .contact-form textarea { width: 100%; min-height: 42px; padding: 10px 11px; border: 1px solid var(--line-strong); border-radius: 2px; outline: none; background: var(--bg); color: var(--text); font-size: 11px; font-weight: 400; }.contact-form textarea { min-height: 130px; resize: vertical; }.contact-form input:focus, .contact-form textarea:focus { border-color: var(--text); box-shadow: 0 0 0 2px color-mix(in srgb, var(--text) 10%, transparent); }.contact-form label > .field-hint, .contact-form label > small { color: var(--muted); font-size: 8px; font-weight: 400; }.contact-form .button { justify-self: start; min-height: 43px; font-size: 11px; }.contact-form-footnote { margin: 14px 0 0; color: var(--muted); font-size: 7px; line-height: 1.7; }.contact-form-footnote strong { color: var(--text); font-weight: 600; }.contact-honeypot { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; }
 .form-success { border-color: var(--line-strong); }
 
+/* Shared reading sizes across marketing, account, and workspace screens. */
+body.marketing-body .site-nav { font-size: 14px; }
+body.marketing-body .button { font-size: 14px; }
+body.marketing-body .button-small { font-size: 13px; }
+body.marketing-body .text-link { font-size: 14px; }
+body.marketing-body main p { font-size: 16px; }
+body.marketing-body main li { font-size: 15px; }
+body.marketing-body main :is(label, input, select, textarea) { font-size: 15px; }
+body.marketing-body main small { font-size: 12px; }
+body.marketing-body main .hero-visual p { font-size: 8px; }
+body.marketing-body main .hero-visual small { font-size: 7px; }
+body.marketing-body main .faq-list summary { font-size: 15px; }
+body.marketing-body main .quote-attribution b { font-size: 13px; }
+body.marketing-body .footer-column { font-size: 13px; }
+body.marketing-body .footer-column .eyebrow { font-size: 10px; }
+body.marketing-body .footer-bottom { font-size: 12px; }
+body.marketing-body .billing-switch button { font-size: 13px; }
+body.marketing-body .billing-switch button span { font-size: 10px; }
+
+body.marketing-body main .form-alert { font-size: 14px; }
+
+body.workspace-body .workspace-sidebar { font-size: 14px; }
+body.workspace-body .workspace-org b, body.workspace-body .account-info b { font-size: 13px; }
+body.workspace-body .workspace-org small, body.workspace-body .account-info small { font-size: 12px; }
+body.workspace-body .nav-caption { font-size: 10px; }
+body.workspace-body .workspace-nav > a { font-size: 14px; }
+body.workspace-body .sidebar-help b, body.workspace-body .sidebar-help a { font-size: 12px; }
+body.workspace-body .breadcrumb { font-size: 13px; }
+body.workspace-body .privacy-pill { font-size: 12px; }
+body.workspace-body .workspace-content p { font-size: 15px; }
+body.workspace-body .workspace-content :is(td, th, label, input, select, textarea, summary) { font-size: 14px; }
+body.workspace-body .workspace-content small { font-size: 12px; }
+body.workspace-body .workspace-content .eyebrow { font-size: 10px; }
+body.workspace-body .workspace-content .text-link { font-size: 14px; }
+body.workspace-body .workspace-content .button { font-size: 14px; }
+body.workspace-body .workspace-content :is(.table-title, .back-link, .record-subtitle) { font-size: 14px; }
+body.workspace-body .workspace-content :is(.detail-facts b, .clause-card h3, .source-file b, .version-list > a b, .activity-item b, .obligation-row strong, .team-member-main b, .activity-feed-main strong, .report-record-row strong, .obligation-report-row strong) { font-size: 14px; }
+body.workspace-body .workspace-content :is(.clause-card blockquote, .form-section-title p) { font-size: 14px; }
+body.workspace-body .workspace-content :is(.version-list > a > span:last-child, .report-row-date, .activity-feed-row time) { font-size: 12px; }
+body.workspace-body .workspace-content .pagination-wrap { font-size: 13px; }
+body.workspace-body .metric-label { font-size: 12px; }
+body.workspace-body .metric-card > a { font-size: 13px; }
+body.workspace-body .panel-count { font-size: 11px; }
+body.workspace-body .contract-row-main strong, body.workspace-body .date-row strong { font-size: 14px; }
+body.workspace-body .obligation-row > div > span { font-size: 12px; }
+body.workspace-body .category-name { font-size: 13px; }
+body.workspace-body .category-name b { font-size: 13px; }
+body.workspace-body .report-window, body.workspace-body .report-window select { font-size: 13px; }
+
+/* A clearly labeled checkout preview with no payment collection. */
+.checkout-page { min-height: 70vh; padding: 80px 0 100px; background: var(--surface); }
+.checkout-layout { display: grid; grid-template-columns: .9fr 1.1fr; align-items: start; gap: 9%; }
+.checkout-copy { padding-top: 38px; }
+.checkout-copy h1, .checkout-complete-card h1 { margin: 20px 0 18px; font-size: clamp(48px, 6vw, 72px); font-weight: 500; letter-spacing: -.075em; line-height: .98; }
+.checkout-copy h1 em { color: var(--muted); font-style: normal; font-weight: 400; }
+.checkout-copy > p:not(.eyebrow) { max-width: 410px; margin-bottom: 24px; color: var(--muted); font-size: 16px; line-height: 1.75; }
+.checkout-card, .checkout-complete-card { padding: 30px; border: 1px solid var(--line-strong); background: var(--bg); }
+.checkout-card-heading { display: flex; align-items: center; justify-content: space-between; padding-bottom: 17px; border-bottom: 1px solid var(--line); }
+.checkout-demo-badge { padding: 7px 9px; border: 1px solid var(--line-strong); color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .08em; }
+.checkout-plan-summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+.checkout-plan-summary h2 { margin: 0 0 3px; font-size: 24px; }
+.checkout-plan-summary p { margin: 0; color: var(--muted); font-size: 14px; }
+.checkout-plan-summary > strong { flex: 0 0 auto; font-size: 30px; font-weight: 500; letter-spacing: -.06em; }
+.checkout-plan-summary > strong small { color: var(--muted); font-size: 13px; font-weight: 400; letter-spacing: 0; }
+.checkout-demo-payment { margin: 22px 0; padding: 17px; border: 1px dashed var(--line-strong); background: var(--surface); }
+.checkout-demo-payment > div { display: grid; grid-template-columns: 24px 1fr; align-items: center; gap: 1px 10px; margin: 13px 0 9px; }
+.checkout-demo-payment > div > span { grid-row: span 2; font-size: 18px; }
+.checkout-demo-payment strong { font-size: 14px; }
+.checkout-demo-payment small { color: var(--muted); font-size: 12px; }
+.checkout-demo-payment p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.checkout-form { display: grid; gap: 16px; }
+.checkout-form label { display: grid; gap: 7px; font-size: 14px; font-weight: 600; }
+.checkout-form input { width: 100%; min-height: 48px; padding: 10px 12px; border: 1px solid var(--line-strong); background: var(--bg); font-size: 15px; }
+.checkout-disclaimer { margin: 16px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.checkout-complete-page { display: grid; place-items: center; }
+.checkout-complete-card { width: min(100%, 670px); text-align: center; }
+.checkout-success-mark { display: inline-grid; width: 52px; height: 52px; place-items: center; border: 1px solid var(--line-strong); border-radius: 50%; font-size: 25px; }
+.checkout-complete-card h1 { font-size: clamp(40px, 5vw, 60px); }
+.checkout-complete-card > p:not(.eyebrow) { color: var(--muted); font-size: 16px; line-height: 1.7; }
+.checkout-complete-card .button { margin-top: 12px; }
+
 @media (max-width: 1050px) {
+    .price-card { padding-inline: 19px; }
+    .price-label, .price-stamp { font-size: 9px; }
+    .checkout-layout { gap: 5%; }
     .product-status-grid { grid-template-columns: repeat(2, 1fr); }
     .product-status-grid article:nth-child(3) { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
     .product-status-grid article:nth-child(4) { border-top: 1px solid var(--line); }
@@ -744,6 +859,10 @@ input::placeholder, textarea::placeholder { color: var(--subtle); }
     .nvidia-grid { grid-template-columns: 1fr 1fr; }
     .contact-page { padding: 54px 0 75px; }
     .contact-layout { grid-template-columns: 1fr; gap: 32px; }
+    .checkout-page { padding: 52px 0 70px; }
+    .checkout-layout { grid-template-columns: 1fr; gap: 28px; }
+    .checkout-copy { padding-top: 0; }
+    .checkout-card, .checkout-complete-card { padding: 21px; }
     .contact-intro { padding-top: 0; }
     .contact-address { margin-top: 24px; }
     .contact-side-note { margin-top: 21px; }
@@ -856,6 +975,7 @@ input::placeholder, textarea::placeholder { color: var(--subtle); }
     .review-art { margin-right: 4px; }
     .approach-orbit { transform: scale(.74); }
     .product-hero h1, .contact-intro h1 { font-size: 53px; }
+    .checkout-copy h1 { font-size: 53px; }
     .product-hero-art { min-height: 295px; }
     .product-orbit { width: 260px; height: 260px; }
     .product-orbit-two { width: 185px; height: 185px; }

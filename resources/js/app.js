@@ -105,6 +105,11 @@ document.querySelectorAll('[data-billing-switch]').forEach((billingSwitch) => {
             card.querySelectorAll('[data-price-detail]').forEach((element) => {
                 element.textContent = element.dataset[`${period}Note`] ?? element.dataset[period];
             });
+            card.querySelectorAll('[data-checkout-plan]').forEach((link) => {
+                const checkoutUrl = new URL(link.href, window.location.origin);
+                checkoutUrl.searchParams.set('billing', period);
+                link.href = checkoutUrl.toString();
+            });
         });
     };
 
