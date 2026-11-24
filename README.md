@@ -25,11 +25,13 @@ The first release stores user-reviewed contract information. It does not extract
 
 The landing page introduces Deyvoras, its agreement workflow, product features, illustrative team perspectives, current and proposed pricing, and frequently asked questions. Testimonials are clearly identified as illustrative until verified customer quotes are available. The current workspace is free; Team and Business are proposed plans.
 
-The Team and Business links open a demo checkout preview. It accepts a name and email, then shows a confirmation without collecting card details, saving a subscription, or processing a payment. This flow is for UI review only and is not a billing integration.
+The Team and Business links open a clearly labeled sandbox checkout. It accepts customer details and card fields, validates card number, expiry, and security code in the browser, and then shows a confirmation. Card fields have no form names, are cleared before submission, and are never sent to the server. No charge or subscription is created, and no payment processor is connected. Only use non-real card data in this flow.
 
 The `/product` page separates features available in the current release from undated product direction and possible future NVIDIA SDK exploration. No NVIDIA SDK or model is integrated into the current application.
 
-The `/contact` form sends enquiries to `support@deyvoras.com` from `no-reply@deyvoras.com`, with the visitor’s address set as Reply-To. The endpoint is throttled and includes a honeypot field. For production delivery, configure an SMTP mailer (`MAIL_MAILER=smtp`, `MAIL_HOST`, `MAIL_PORT`, `MAIL_USERNAME`, `MAIL_PASSWORD`, and `MAIL_SCHEME`) through the production environment or `APP_ENV_EXTRA`; the local example uses Laravel’s log mailer.
+Google sign-in is available on the login and registration pages. Configure `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, and `GOOGLE_REDIRECT_URI` in the production environment or `APP_ENV_EXTRA`; register the exact callback URL (`https://your-domain/auth/google/callback`) in the Google OAuth client. The first Google sign-in creates an owner account and private workspace; a verified Google email matching an existing account signs in to that account.
+
+The `/contact` form sends enquiries to `support@deyvoras.com` from `no-reply@deyvoras.com`, with the visitor’s address set as Reply-To. It is throttled, includes a honeypot, and uses Cloudflare Turnstile with server-side Siteverify validation when configured. Add `TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY` to production environment configuration; use keys restricted to the deployed hostname. Production form submissions are blocked until both keys are set. For production email delivery, configure an SMTP mailer (`MAIL_MAILER=smtp`, `MAIL_HOST`, `MAIL_PORT`, `MAIL_USERNAME`, `MAIL_PASSWORD`, and `MAIL_SCHEME`) through the production environment or `APP_ENV_EXTRA`; the local example uses Laravel’s log mailer.
 
 Compiled Blade views under `storage/framework/views` are runtime cache files. They are ignored by Git and can be regenerated with `php artisan view:cache`.
 

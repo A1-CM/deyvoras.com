@@ -5,7 +5,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContractController;
 use App\Http\Controllers\ContractWorkspaceController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\DemoCheckoutController;
+use App\Http\Controllers\SandboxCheckoutController;
+use App\Http\Controllers\GoogleAuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\TeamController;
@@ -15,9 +16,12 @@ Route::view('/', 'site.home')->name('home');
 Route::view('/product', 'site.product')->name('product');
 Route::get('/contact', [ContactController::class, 'show'])->name('contact');
 Route::post('/contact', [ContactController::class, 'send'])->middleware('throttle:5,1')->name('contact.send');
-Route::get('/checkout/complete', [DemoCheckoutController::class, 'complete'])->name('checkout.complete');
-Route::post('/checkout/complete', [DemoCheckoutController::class, 'confirm'])->middleware('throttle:10,1')->name('checkout.confirm');
-Route::get('/checkout/{plan}', [DemoCheckoutController::class, 'show'])->name('checkout.show');
+Route::get('/checkout/complete', [SandboxCheckoutController::class, 'complete'])->name('checkout.complete');
+Route::post('/checkout/complete', [SandboxCheckoutController::class, 'confirm'])->middleware('throttle:10,1')->name('checkout.confirm');
+Route::get('/checkout/{plan}', [SandboxCheckoutController::class, 'show'])->name('checkout.show');
+
+Route::get('/auth/google/redirect', [GoogleAuthController::class, 'redirect'])->middleware('throttle:10,1')->name('auth.google.redirect');
+Route::get('/auth/google/callback', [GoogleAuthController::class, 'callback'])->name('auth.google.callback');
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', [AuthController::class, 'showLogin'])->name('login');

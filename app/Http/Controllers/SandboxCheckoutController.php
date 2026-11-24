@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\View\View;
 
-class DemoCheckoutController extends Controller
+class SandboxCheckoutController extends Controller
 {
     private const PLANS = [
         'team' => ['name' => 'Team', 'monthly' => 29, 'yearly' => 290],
@@ -40,7 +40,7 @@ class DemoCheckoutController extends Controller
 
         $plan = self::PLANS[$data['plan']];
 
-        return redirect()->route('checkout.complete')->with('demo_checkout', [
+        return redirect()->route('checkout.complete')->with('sandbox_checkout', [
             'name' => $data['name'],
             'plan' => $plan['name'],
             'billing' => $data['billing'],
@@ -51,7 +51,7 @@ class DemoCheckoutController extends Controller
     public function complete(): View
     {
         return view('site.checkout-complete', [
-            'checkout' => session('demo_checkout'),
+            'checkout' => session('sandbox_checkout'),
         ]);
     }
 }
