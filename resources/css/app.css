@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import '@fontsource-variable/space-grotesk';
+@import '@fortawesome/fontawesome-free/css/brands.min.css';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -766,7 +767,7 @@ body.workspace-body .report-window, body.workspace-body .report-window select { 
 .checkout-disclaimer { margin: 16px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
 .google-auth-button { display: flex; min-height: 48px; align-items: center; justify-content: center; gap: 11px; border: 1px solid var(--line-strong); border-radius: 5px; background: var(--bg); font-size: 14px; font-weight: 600; }
 .google-auth-button:hover { background: var(--surface); }
-.google-auth-mark { display: inline-grid; width: 21px; height: 21px; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: #4285f4; font-family: Arial, sans-serif; font-size: 14px; font-weight: 700; }
+.google-auth-button .fa-google { color: #4285f4; font-size: 17px; }
 .auth-divider { display: flex; align-items: center; gap: 12px; margin: 17px 0; color: var(--muted); font-size: 12px; }
 .auth-divider::before, .auth-divider::after { height: 1px; flex: 1; background: var(--line); content: ''; }
 .contact-form .cf-turnstile { min-height: 65px; }
